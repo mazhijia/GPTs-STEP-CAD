@@ -1,7 +1,13 @@
-name: myenv
+name: myflaskenv
 channels:
+  - defaults
   - conda-forge
 dependencies:
-  - python=3.8
+  - python=3.8  # 或者是您需要的任何 Python 版本
   - flask
-  - pythonocc-core
+  - requests
+  - werkzeug
+  - pythonocc-core=7.4.0  # 确保版本与您的需要相匹配
+  - pip
+  - pip:
+      - secure-smtplib  # 如果您需要发送邮件的话
